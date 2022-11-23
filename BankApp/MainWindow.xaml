@@ -1,0 +1,67 @@
+﻿<Window x:Class="BankApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400" Background="#FF6EA06E">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="100" />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Content="Imię" HorizontalAlignment="Right" Width="60" Margin="0,0,40,0"/>
+        <TextBox Name="Imie" Grid.Column="1" Margin="0,3"/>
+        <Label Grid.Row="1" Content="Nazwisko"/>
+        <TextBox  Name="Naziwsko" Grid.Row="1" Grid.Column="1" Margin="0,3" />
+
+        <Label Grid.Row="2" Content="Numer konta"/>
+        <TextBox Grid.Row="2" Name="Nrkonta"  Grid.Column="1" Margin="0,3" />
+
+
+
+        <Label Grid.Row="4" Content="Zmiana PINu" Margin="0,15,0,0"/>
+
+        <Button Content="7" HorizontalAlignment="Left"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,40,0,0"/>
+        <Button Content="8" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,40,0,0"/>
+        <Button Content="9" HorizontalAlignment="Right"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,40,0,0"/>
+
+        <Button Content="4" HorizontalAlignment="Left"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,70,0,0"/>
+        <Button Content="5" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,70,0,0"/>
+        <Button Content="6" HorizontalAlignment="Right"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,70,0,0"/>
+
+        <Button Content="1" HorizontalAlignment="Left"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,100,0,0"/>
+        <Button Content="2" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,100,0,0"/>
+        <Button Content="3" HorizontalAlignment="Right"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,100,0,0"/>
+
+        <Button Content="0" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,130,0,0"/>
+
+
+        <Label Grid.Row="5" Content="Nowy Pin: "/>
+        <Button Name="ConfirmPin" Content="Zatwierdź" HorizontalAlignment="Right"  Grid.Row="5" VerticalAlignment="Top" Width="100" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,25,0,0" Click="ConfirmPin_Click" />
+
+
+        <Label Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" Content="Zmien stan konta: "/>
+
+        <TextBox Grid.Row="5"  Grid.Column="1" Margin="0,25"  Height="20"/>
+        <Button Name="ConfirmMoney" Content="Zatwierdź"   Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" Width="100" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,45,0,0" />
+
+        <Button Name="ConfirmDane" Content="Zatwierdź"   Grid.Row="4" Grid.Column="1"  Width="100" Height="20" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Background="White" Margin="0,0,0,150" Click="ConfirmDane_Click"  />
+        
+        <Label Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Imie: " />
+
+
+
+
+    </Grid>
+</Window>
