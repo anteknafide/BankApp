@@ -43,6 +43,7 @@ namespace BankApp
         {
             return numerKonta;
         }
+        
 
         /// <summary>Pobierz stan konta klienta w groszach</summary>
         public int getStanKonta()
@@ -63,6 +64,8 @@ namespace BankApp
         /// <example>klient.setStanKonta(1000)</example>
         /// <example>klient.setStanKonta(-500)</example>
         /// <returns>Bool dla powodzenia operacji</returns>
+        /// 
+        
         public bool setStanKonta(int zmiana)
         {
             if (this.stanKonta + zmiana >= 0) //sprawdza czy stan konta nie będzie ujemny po zmianie
@@ -88,5 +91,6 @@ namespace BankApp
             }
             else return false;
         }
+        
     }
 }
