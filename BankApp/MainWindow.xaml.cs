@@ -31,7 +31,10 @@ namespace BankApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            StreamWriter zapis;
+            zapis = File.CreateText($"klient{i}.txt");
+            zapis.WriteLine($"Klient {i} imie: {klient1.getImie()},  nazwisko {klient1.getNazwisko()}, nrkonta {klient1.getNumerKonta()}, stan konta :{klient1.getStanKonta()}, pin: {klient1.getPIN()}" );
+         zapis.Close();  
         }
 
        
@@ -46,10 +49,12 @@ namespace BankApp
             {
 
             klient1 = new Klient(Imie.Text, Naziwsko.Text, Nrkonta.Text);
-                nrkontalabel.Content += Nrkonta.Text;
-                Imie.Text = "";
-                Naziwsko.Text = "";
-                Nrkonta.Text = "";
+                nrkontalabel.Content = Nrkonta.Text;
+                Imie.Text = " ";
+                Naziwsko.Text = " ";
+                Nrkonta.Text = " ";
+
+            }
 
             }
 
